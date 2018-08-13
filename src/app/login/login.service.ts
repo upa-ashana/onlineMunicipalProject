@@ -10,7 +10,7 @@ export class LoginService {
 
   authenticateUser(userModel){//--
 
-    let loginUrl="http://localhost:8080/hotel/login"//--
+    let loginUrl="http://localhost:8080/municipal/login"//--
     let headers1=new HttpHeaders({'content-Type':'application/json' });//--
     return this.http.post(loginUrl, userModel,{headers: headers1});//--
   

@@ -13,14 +13,16 @@ import {error} from 'util';
 export class LoginComponent implements OnInit {
     constructor(public router: Router, private loginService:LoginService) {}
     private userModel={'userName':'','password':''};
+    private token = {'token':'','value':''};
 
     ngOnInit() {}
 
-    onLoggedin() {//--
+    onLoggedin() {//-- hello i am true now
        
         this.loginService.authenticateUser(this.userModel).subscribe(data=>{
-            console.log(JSON.parse(JSON.stringify(data))._body)
-            localStorage.setItem("token",JSON.parse(JSON.stringify(data))._body);
+            console.log(data);
+            this.token = JSON.parse(JSON.stringify(data));
+            localStorage.setItem("token",this.token.value);
         },
         error=>{
             console.log(error);
