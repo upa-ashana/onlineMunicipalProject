@@ -8,8 +8,8 @@ import { LoginService } from './login.service';//--
 import {HttpClientModule} from '@angular/common/http';//--
 
 @NgModule({
-    imports: [CommonModule, LoginRoutingModule,FormsModule,HttpClientModule],
+    imports: [CommonModule, LoginRoutingModule, FormsModule, HttpClientModule],
     declarations: [LoginComponent],
-    providers:[LoginService],//--
+    providers:[LoginService]//--
 })
 export class LoginModule {}

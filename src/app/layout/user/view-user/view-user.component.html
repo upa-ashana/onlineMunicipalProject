@@ -1,0 +1,45 @@
+<!--<div class="card mb-12">
+    <div class="card-header">Striped Rows</div>
+    <div class="card-body table-responsive">
+        <input
+        type='text'
+        style='padding:8px;margin:15px auto;width:30%;'
+        placeholder='Type to filter the name column...'
+        (keyup)='updateFilter($event)'/>
+  
+      <ngx-datatable #table class='bootstrap'
+      [rows]="rows" 
+      [columns]="columns" 
+      [loadingIndicator]="loadingIndicator"
+      [columnMode]="'force'"
+      [limit]="10"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      >
+      <ngx-datatable-column name="Iduser"></ngx-datatable-column>
+      <ngx-datatable-column name="First Name"></ngx-datatable-column>
+      <ngx-datatable-column name="Last Name"></ngx-datatable-column>
+      <ngx-datatable-column name="UserName"></ngx-datatable-column>
+      <ngx-datatable-column name="Password"></ngx-datatable-column>
+      <ngx-datatable-column name="Email"></ngx-datatable-column>     
+      <ngx-datatable-column name="Address"></ngx-datatable-column>
+      <ngx-datatable-column name="User Phone"></ngx-datatable-column>
+      <ngx-datatable-column name="Gender"></ngx-datatable-column>
+      <ngx-datatable-column name="Role"></ngx-datatable-column>    
+
+  
+      <ngx-datatable-column name="Action" prop="iduser" [sortable]="false" *ngIf="userRole === 'admin'">
+          <ng-template let-rowIndex="rowIndex" let-id="iduser" let-value="value" ngx-datatable-cell-template>
+              <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/user/edituser/'+value]">
+                <i class="fa fa-edit"></i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger actionBtn" (click)="deleteUser(value)">
+                  <i class="fa fa-trash"></i> Delete
+              </button>
+          </ng-template> 
+      </ngx-datatable-column> 
+      
+      </ngx-datatable>     
+    </div>
+  </div>-->

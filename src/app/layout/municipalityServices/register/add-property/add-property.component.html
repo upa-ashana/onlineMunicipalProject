@@ -1,0 +1,147 @@
+
+<div class="panel panel-info" style="margin-top: 40px; background: #F0F0F0">
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="background:#222222;height:40px">
+      <h4 style="text-align: center; color: white;padding-top:5px">Add User</h4>
+    </div>  
+    
+     <form class="form-horizontal" (ngSubmit)="addProperty()"  #userForm="ngForm">
+      <fieldset>
+  
+         <div class="form-group">
+          <label class="col-md-4 control-label" for="ownerName">OwnerName:</label>  
+          <div class="col-md-4">
+            <input id="OwnerName" [(ngModel)]="userModel.ownerName" 
+            name="ownerName" type="text" placeholder="ownerName" class="form-control input-md">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="citizonNo">CitizonNo:</label>  
+          <div class="col-md-4">
+            <input id="citizonNo" [(ngModel)]="userModel.citizonNo" 
+            name="citizonNo" type="text" placeholder="citizonNo" class="form-control input-md">
+          </div>
+        </div>      
+  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="phoneNo" style="margin-top:20px">PhoneNo:</label>  
+          <div class="col-md-4">  
+            <input type="text"  id="PhoneNo" name="phoneNo" [(ngModel)]="userModel.phoneNo" 
+             placeholder="phoneNo" class="form-control input-md">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="region">Region:</label>
+          <div class="col-md-4">
+            <input id="Region" [(ngModel)]="userModel.region" 
+            name="region" type="number" placeholder="Region" class="form-control input-md">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="wardNo">WardNo:</label>  
+          <div class="col-md-4">
+            <input id="WardNo" [(ngModel)]="userModel.wardNo" 
+              name="wardNo" type="number" placeholder="WardNo" class="form-control input-md">
+          </div>
+        </div>
+                
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="kittaNo">Kitta Number:</label>  
+          <div class="col-md-4">
+            <input id="KittaNo" [(ngModel)]="userModel.kittaNo" 
+            name="kittaNo" type="number" placeholder="KittaNo" class="form-control input-md">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="houseNo">House Number:</label>  
+          <div class="col-md-4">
+            <input id="HouseNo" [(ngModel)]="userModel.houseNo" 
+            name="houseNo" type="number" placeholder="HouseNo" class="form-control input-md">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="noOfFlat">No Of Flat:</label>  
+          <div class="col-md-4">
+            <input id="NoOfFlat" [(ngModel)]="userModel.noOfFlat" 
+            name="noOfFlat" type="number" placeholder="noOfFlat" class="form-control input-md">          
+          </div>
+        </div>   
+        
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="noOfRoom">No of Room:</label>  
+            <div class="col-md-4">
+              <input id="NoOfRoom" [(ngModel)]="userModel.noOfRoom" 
+              name="noOfRoom" type="number" placeholder="noOfRoom" class="form-control input-md">
+            </div>
+          </div>
+               
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="houseArea">House Area:</label>  
+            <div class="col-md-4">
+              <input id="HouseArea" [(ngModel)]="userModel.houseArea" 
+              name="houseArea" type="number" placeholder="houseArea" class="form-control input-md">
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-md-4 control-label" for="landArea">Land Area:</label>  
+              <div class="col-md-4">
+                <input id="LandArea" [(ngModel)]="userModel.landArea" 
+                name="landArea" type="number" placeholder="LandArea" class="form-control input-md">
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="noOfAnna">No of Anna:</label>  
+                <div class="col-md-4">
+                  <input id="NoOfAnna" [(ngModel)]="userModel.noOfAnna" 
+                  name="noOfAnna" type="number" placeholder="noOfAnna" class="form-control input-md">
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <label class="col-md-4 control-label" for="streetName">Street Name:</label>  
+                  <div class="col-md-4">
+                    <input id="StreetName" [(ngModel)]="userModel.streetName" 
+                    name="streetName" type="text" placeholder="streetName" class="form-control input-md">
+                  </div>
+                </div>
+      
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="registerDate">Registed Date:</label>  
+                    <div class="col-md-4">
+                      <input id="RegisterDate" [(ngModel)]="userModel.registerDate" 
+                      name="registerDate" type="date" placeholder="registerDate" class="form-control input-md">
+                    </div>
+                  </div>
+        
+                  <div class="form-group">
+                      <label class="col-md-4 control-label" for="registrationFee">Registration Fee:</label>  
+                      <div class="col-md-4">
+                        <input id="RegistrationFee" [(ngModel)]="userModel.registrationFee" 
+                        name="registrationFee" type="number" placeholder="registrationFee" class="form-control input-md">
+                      </div>
+                   </div>
+                  <div class="form-group">
+                        <label class="col-md-4 control-label" for="ownerSignature">Signature:</label>  
+                        <div class="col-md-4">
+                          <input id="OwnerSignature" [(ngModel)]="userModel.ownerSignature" 
+                          name="ownerSignature" type="text" placeholder="ownerSignature" class="form-control input-md">
+                        </div>
+                   </div>        
+       
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Save"></label>
+          <div class="col-md-8">
+            <button id="Save" name="Save" class="btn btn-success">Save</button>
+            <button id="Cancel" name="Cancel" class="btn btn-danger">Cancel</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  
