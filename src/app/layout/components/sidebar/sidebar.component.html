@@ -61,8 +61,9 @@
                                 </li>
                         </ul>
                    </li>
-            </div>                                    
-                                    
+            </div>   
+               
+                                         
              <!--proeprty transfer -->                       
             <div class="nested-menu">
                 <a class="list-group-item" (click)="addExpandClass('transfer')">
@@ -88,8 +89,88 @@
                                 </li>
                             </ul>
                        </li> 
-                 </div>               
-             
+                 </div>   
+                
+        <!--Payment-->
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('payment')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Payment' | translate }}</span>
+            </a> 
+                   <li class="nested" [class.expand]="showMenu === 'payment'">
+                      <ul class="submenu">
+                              <li>
+                                   <a [routerLink]="['/payment/addpayment']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                    <span>{{ 'Add Payment' | translate }}</span>
+                                   </a>
+                                </li>
+                                <li>                                   
+                                   <a [routerLink]="['/payment/viewpayment']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                        <span>{{ 'View Payment' | translate }}</span>
+                                   </a>    
+                                </li>
+                                <li>                                   
+                                    <a [routerLink]="['/payment/editpayment']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                        <span>{{ 'Edit Payment' | translate }}</span>
+                                   </a>  
+                                </li>
+                        </ul>
+                   </li>
+            </div>  
+                 
+        <!--House Information-->
+        <!-- <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('house')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'House Info' | translate }}</span>
+            </a> 
+                   <li class="nested" [class.expand]="showMenu === 'house'">
+                      <ul class="submenu">
+                              <li>
+                                   <a [routerLink]="['/house/addhouse']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                    <span>{{ 'Add House' | translate }}</span>
+                                   </a>
+                                </li>
+                                <li>                                   
+                                   <a [routerLink]="['/house/viewhouse']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                        <span>{{ 'View House' | ousetranslate }}</span>
+                                   </a>    
+                                </li>
+                                <li>                                   
+                                    <a [routerLink]="['/house/edithouse']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                        <span>{{ 'Edit House' | translate }}</span>
+                                   </a>  
+                                </li>
+                        </ul>
+                   </li>
+            </div>  -->
+            
+             <!--Land Information-->
+       <!-- <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('land')">
+                <i class="fa fa-plus"></i>&nbsp;
+                <span>{{ 'Land Info' | translate }}</span>
+            </a> 
+                   <li class="nested" [class.expand]="showMenu === 'land'">
+                      <ul class="submenu">
+                              <li>
+                                   <a [routerLink]="['/land/addland']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                    <span>{{ 'Add Land' | translate }}</span>
+                                   </a>
+                                </li>
+                                <li>                                   
+                                   <a [routerLink]="['/land/viewland']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                        <span>{{ 'View Land' | ousetranslate }}</span>
+                                   </a>    
+                                </li>Land
+                                <li>                                   
+                                    <a [routerLink]="['/land/editland']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                        <span>{{ 'Edit Land' | translate }}</span>
+                                   </a>  
+                                </li>
+                        </ul>
+                   </li>
+            </div>    -->
  
         <div class="header-fields">     
             <div class="nested-menu"> 

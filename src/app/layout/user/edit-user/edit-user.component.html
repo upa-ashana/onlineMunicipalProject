@@ -1,4 +1,3 @@
-<!--
 
   <div class="panel panel-info" style="margin-top: 40px; background: #F0F0F0">
   
@@ -6,10 +5,8 @@
     <h4 style="text-align: center; color: white;padding-top:5px">Edit User</h4>
   </div>
   
-  <form class="form-horizontal" (ngSubmit)="updateUser()" #userEditForm="ngForm">
-      <fieldset>
-      
-      
+  <form class="form-horizontal" (ngSubmit)="editUser()" #userEditForm="ngForm">
+      <fieldset>       
      
       <div class="form-group">
         <label class="col-md-4 control-label" for="firstName">FirstName:</label>  
@@ -78,22 +75,38 @@
       </div>
 
       <div class="form-group">
-        <label class="col-md-4 control-label" for="gender">Gender:</label>  
+        <label class="col-md-4 control-label" for="gender">Gender</label>
         <div class="col-md-4">
-        <input id="Gender" [(ngModel)]="userModel.gender" 
-        name="gender" type="text" placeholder="Gender" class="form-control input-md">
-          
+          <label class="radio-inline">
+            <input type="radio" value="M" name="gender" [(ngModel)]="userModel.gender" checked="checked">
+            Male
+          </label>
+       
+          <label class="radio-inline">
+            <input type="radio" value ="F" name="gender" [(ngModel)]="userModel.gender">
+            Female
+          </label>  
+          </div>
         </div>
-      </div> 
 
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="role">Role:</label>  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="role">Role:</label>  
+          <div class="col-md-4">
+            <input id="Role" [(ngModel)]="userModel.role" 
+            name="role" type="text" placeholder="Role" class="form-control input-md">               
+          </div>
+        </div>  
+<!-- 
+      <div class ="form-group">  
+        <label class="col-md-4 control-label" for="role">Role</label>
         <div class="col-md-4">
-        <input id="Role" [(ngModel)]="userModel.role" 
-        name="role" type="text" placeholder="Role" class="form-control input-md">
-          
-        </div>
-      </div> 
+             <select class="form-control" id="role" [(ngModel)]="userModel.role">
+              <option value="" selected></option>    
+              <option value="admin">admin</option>
+                  <option value="user">user</option>
+             </select>
+       </div>
+       </div> -->
            
       <div class="form-group">
         <label class="col-md-4 control-label" for="update"></label>
@@ -106,4 +119,4 @@
       </fieldset>
       </form>
       </div>
--->
+

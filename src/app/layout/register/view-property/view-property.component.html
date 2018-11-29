@@ -1,1 +1,55 @@
 
+<div class="card mb-12">
+    <div class="card-header">Property Registration Record</div>
+    <div class="card-body table-responsive">
+        <input
+        type='text'
+        style='padding:8px;margin:15px auto;width:30%;'
+        placeholder='Type to filter the name column...'
+        (keyup)='updateFilter($event)'/>
+  
+      <ngx-datatable #table class='bootstrap'
+      [rows]="rows" 
+      [columns]="columns" 
+      [loadingIndicator]="loadingIndicator"
+      [columnMode]="'force'"
+      [limit]="10"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      >
+      <ngx-datatable-column name="propertyRegistrationId"></ngx-datatable-column>
+      <ngx-datatable-column name="ownerName"></ngx-datatable-column>
+      <ngx-datatable-column name="citizonNo"></ngx-datatable-column>
+      <ngx-datatable-column name="phoneNo"></ngx-datatable-column>
+      <ngx-datatable-column name="region"></ngx-datatable-column>
+      <ngx-datatable-column name="wardNo"></ngx-datatable-column>     
+      <ngx-datatable-column name="kittaNo"></ngx-datatable-column>
+      <ngx-datatable-column name="houseNo"></ngx-datatable-column>
+      <ngx-datatable-column name="noOfRoom"></ngx-datatable-column>
+      <ngx-datatable-column name="noOfFlat"></ngx-datatable-column>  
+      <ngx-datatable-column name="houseArea"></ngx-datatable-column>
+      <ngx-datatable-column name="landArea"></ngx-datatable-column>
+      <ngx-datatable-column name="noOfAnna"></ngx-datatable-column>
+      <ngx-datatable-column name="streetName"></ngx-datatable-column>
+      <ngx-datatable-column name="registerDate"></ngx-datatable-column>
+      <ngx-datatable-column name="registrationFee"></ngx-datatable-column>     
+      <ngx-datatable-column name="ownerSignature"></ngx-datatable-column>
+      <ngx-datatable-column name="wardsachibSignature"></ngx-datatable-column>
+      <ngx-datatable-column name="userRegisterPropertyList"></ngx-datatable-column>       
+
+  
+      <ngx-datatable-column name="Action" prop="propertyRegistrationId" [sortable]="false" *ngIf="role === 'admin'">
+          <ng-template let-rowIndex="rowIndex" let-id="propertyRegistrationId" let-value="value" ngx-datatable-cell-template>
+              <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/property/editproperty/'+value]">
+                <i class="fa fa-edit"></i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger actionBtn" (click)="deleteProperty(value)">
+                  <i class="fa fa-trash"></i> Delete
+              </button>
+          </ng-template> 
+      </ngx-datatable-column> 
+      
+      </ngx-datatable>     
+    </div>
+  </div>  

@@ -3,7 +3,7 @@ export class TransferModel {
     public giverName:String;
     public giverCitizenNo:String;
     public giverMobileNo:String;
-    public giverRegion:number;
+    public giverRegion:String;
     public giverWardNo:number;
     public giverSignature:String;
     public takerName:String;
@@ -20,4 +20,5 @@ export class TransferModel {
     public date:Date;
     public transferFee:number;
     public wardSachibSignature:String;
+    public userDoNamsariList:any;
 }

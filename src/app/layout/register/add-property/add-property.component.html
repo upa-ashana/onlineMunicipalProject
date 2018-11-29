@@ -2,137 +2,213 @@
 <div class="panel panel-info" style="margin-top: 40px; background: #F0F0F0">
     <!-- Default panel contents -->
     <div class="panel-heading" style="background:#222222;height:40px">
-      <h4 style="text-align: center; color: white;padding-top:5px">Add User</h4>
+      <h4 style="text-align: center; color: white;padding-top:5px">Add Property</h4>
     </div>  
     
-     <form class="form-horizontal" (ngSubmit)="addProperty()"  #userForm="ngForm">
-      <fieldset>
-  
+     <form name ="addpropertyform" class="form-horizontal" (ngSubmit)="addProperty()"  #userForm="ngForm" novalidate>
+      <fieldset>  
          <div class="form-group">
           <label class="col-md-4 control-label" for="ownerName">OwnerName:</label>  
           <div class="col-md-4">
-            <input id="OwnerName" [(ngModel)]="userModel.ownerName" 
-            name="ownerName" type="text" placeholder="ownerName" class="form-control input-md">
+            <input  name="ownerName" type="text" [(ngModel)]="propertyModel.ownerName" #ownerName="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && ownerName.invalid}" 
+            placeholder="ownerName" class="form-control input-md" required/>
+            <div class="invalid-feedback">          
+              <div>this field is required</div>
+            </div>
           </div>
         </div>
         
         <div class="form-group">
           <label class="col-md-4 control-label" for="citizonNo">CitizonNo:</label>  
           <div class="col-md-4">
-            <input id="citizonNo" [(ngModel)]="userModel.citizonNo" 
-            name="citizonNo" type="text" placeholder="citizonNo" class="form-control input-md">
+            <input name="citizonNo" type="text" [(ngModel)]="propertyModel.citizonNo" #citizonNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && citizonNo.invalid}" 
+             placeholder="citizonNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+               </div>
           </div>
         </div>      
   
         <div class="form-group">
           <label class="col-md-4 control-label" for="phoneNo" style="margin-top:20px">PhoneNo:</label>  
           <div class="col-md-4">  
-            <input type="text"  id="PhoneNo" name="phoneNo" [(ngModel)]="userModel.phoneNo" 
-             placeholder="phoneNo" class="form-control input-md">
+            <input type="text"  id="PhoneNo" name="phoneNo" [(ngModel)]="propertyModel.phoneNo" #phoneNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && phoneNo.invalid}" 
+             placeholder="phoneNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+            </div>
           </div>
         </div>
         
         <div class="form-group">
           <label class="col-md-4 control-label" for="region">Region:</label>
           <div class="col-md-4">
-            <input id="Region" [(ngModel)]="userModel.region" 
-            name="region" type="number" placeholder="Region" class="form-control input-md">
+            <input  name="region" type="text" [(ngModel)]="propertyModel.region" #region="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && region.invalid}" 
+            placeholder="Region" class="form-control input-md" required/>
+            <div class="invalid-feedback">          
+                <div>this field is required</div>
+            </div>
           </div>
         </div>
   
         <div class="form-group">
           <label class="col-md-4 control-label" for="wardNo">WardNo:</label>  
           <div class="col-md-4">
-            <input id="WardNo" [(ngModel)]="userModel.wardNo" 
-              name="wardNo" type="number" placeholder="WardNo" class="form-control input-md">
+            <input  name="wardNo" type="number" [(ngModel)]="propertyModel.wardNo" #wardNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && wardNo.invalid}" 
+              placeholder="WardNo" class="form-control input-md" required/>
+              <div class="invalid-feedback">          
+                  <div>this field is required</div>
+              </div>
           </div>
         </div>
                 
         <div class="form-group">
           <label class="col-md-4 control-label" for="kittaNo">Kitta Number:</label>  
           <div class="col-md-4">
-            <input id="KittaNo" [(ngModel)]="userModel.kittaNo" 
-            name="kittaNo" type="number" placeholder="KittaNo" class="form-control input-md">
+            <input name="kittaNo" type="number" [(ngModel)]="propertyModel.kittaNo" #kittaNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && kittaNo.invalid}" 
+             placeholder="KittaNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+            </div>
           </div>
         </div>
         <div class="form-group">
           <label class="col-md-4 control-label" for="houseNo">House Number:</label>  
           <div class="col-md-4">
-            <input id="HouseNo" [(ngModel)]="userModel.houseNo" 
-            name="houseNo" type="number" placeholder="HouseNo" class="form-control input-md">
+            <input name="houseNo" type="number" [(ngModel)]="propertyModel.houseNo" #houseNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && houseNo.invalid}" 
+             placeholder="HouseNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+             </div>
           </div>
         </div>
   
         <div class="form-group">
           <label class="col-md-4 control-label" for="noOfFlat">No Of Flat:</label>  
           <div class="col-md-4">
-            <input id="NoOfFlat" [(ngModel)]="userModel.noOfFlat" 
-            name="noOfFlat" type="number" placeholder="noOfFlat" class="form-control input-md">          
+            <input name="noOfFlat" type="number" [(ngModel)]="propertyModel.noOfFlat" #noOfFlat="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && noOfFlat.invalid}" 
+             placeholder="no Of Flat" class="form-control input-md" required/> 
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+             </div>         
           </div>
         </div>   
         
         <div class="form-group">
             <label class="col-md-4 control-label" for="noOfRoom">No of Room:</label>  
             <div class="col-md-4">
-              <input id="NoOfRoom" [(ngModel)]="userModel.noOfRoom" 
-              name="noOfRoom" type="number" placeholder="noOfRoom" class="form-control input-md">
+              <input name="noOfRoom" type="number" [(ngModel)]="propertyModel.noOfRoom" #noOfRoom="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && noOfRoom.invalid}" 
+               placeholder="No Of Room" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+              </div>
             </div>
           </div>
                
         <div class="form-group">
             <label class="col-md-4 control-label" for="houseArea">House Area:</label>  
             <div class="col-md-4">
-              <input id="HouseArea" [(ngModel)]="userModel.houseArea" 
-              name="houseArea" type="number" placeholder="houseArea" class="form-control input-md">
+              <input name="houseArea" type="number" [(ngModel)]="propertyModel.houseArea" #houseArea="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && houseArea.invalid}" 
+               placeholder="houseArea" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+               </div>
             </div>
           </div>
 
           <div class="form-group">
               <label class="col-md-4 control-label" for="landArea">Land Area:</label>  
               <div class="col-md-4">
-                <input id="LandArea" [(ngModel)]="userModel.landArea" 
-                name="landArea" type="number" placeholder="LandArea" class="form-control input-md">
+                <input name="landArea" type="number" [(ngModel)]="propertyModel.landArea" #landArea="ngModel"
+                [ngClass]="{'is-invalid':userForm.submitted && landArea.invalid}" 
+                 placeholder="LandArea" class="form-control input-md" required/>
+                 <div class="invalid-feedback">          
+                    <div>this field is required</div>
+                </div>
               </div>
             </div>
 
             <div class="form-group">
                 <label class="col-md-4 control-label" for="noOfAnna">No of Anna:</label>  
                 <div class="col-md-4">
-                  <input id="NoOfAnna" [(ngModel)]="userModel.noOfAnna" 
-                  name="noOfAnna" type="number" placeholder="noOfAnna" class="form-control input-md">
+                  <input name="noOfAnna" type="number" [(ngModel)]="propertyModel.noOfAnna" #noOfAnna="ngModel"
+                  [ngClass]="{'is-invalid':userForm.submitted && noOfAnna.invalid}" 
+                   placeholder="No Of Anna" class="form-control input-md" required/>
+                   <div class="invalid-feedback">          
+                      <div> this field is required</div>
+                  </div>
                 </div>
               </div>
 
               <div class="form-group">
                   <label class="col-md-4 control-label" for="streetName">Street Name:</label>  
                   <div class="col-md-4">
-                    <input id="StreetName" [(ngModel)]="userModel.streetName" 
-                    name="streetName" type="text" placeholder="streetName" class="form-control input-md">
+                    <input name="streetName" type="text" [(ngModel)]="propertyModel.streetName" #streetName="ngModel"
+                    [ngClass]="{'is-invalid':userForm.submitted && streetName.invalid}" 
+                     placeholder="streetName" class="form-control input-md" required/>
+                     <div class="invalid-feedback">          
+                        <div>enter your street name</div>
+                    </div>
                   </div>
                 </div>
       
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="registerDate">Registed Date:</label>  
                     <div class="col-md-4">
-                      <input id="RegisterDate" [(ngModel)]="userModel.registerDate" 
-                      name="registerDate" type="date" placeholder="registerDate" class="form-control input-md">
+                      <input name="registerDate" type="date" [(ngModel)]="propertyModel.registerDate" #registerDate="ngModel"
+                      [ngClass]="{'is-invalid':userForm.submitted && registerDate.invalid}" 
+                       placeholder="registerDate" class="form-control input-md" required/>
+                       <div class="invalid-feedback">          
+                          <div>this field is required</div>
+                      </div>
                     </div>
                   </div>
         
                   <div class="form-group">
                       <label class="col-md-4 control-label" for="registrationFee">Registration Fee:</label>  
                       <div class="col-md-4">
-                        <input id="RegistrationFee" [(ngModel)]="userModel.registrationFee" 
-                        name="registrationFee" type="number" placeholder="registrationFee" class="form-control input-md">
+                        <input  name="registrationFee" type="number" [(ngModel)]="propertyModel.registrationFee" #registrationFee="ngModel"
+                        [ngClass]="{'is-invalid':userForm.submitted && registrationFee.invalid}" 
+                        placeholder="registrationFee" class="form-control input-md" required/>
+                        <div class="invalid-feedback">          
+                            <div> enter registration Fee</div>
+                        </div>
                       </div>
                    </div>
                   <div class="form-group">
                         <label class="col-md-4 control-label" for="ownerSignature">Signature:</label>  
                         <div class="col-md-4">
-                          <input id="OwnerSignature" [(ngModel)]="userModel.ownerSignature" 
-                          name="ownerSignature" type="text" placeholder="ownerSignature" class="form-control input-md">
+                          <input name="ownerSignature" type="text" [(ngModel)]="propertyModel.ownerSignature" #ownerSignature="ngModel"
+                          [ngClass]="{'is-invalid':userForm.submitted && ownerSignature.invalid}" 
+                           placeholder="ownerSignature" class="form-control input-md" required/>
+                           <div class="invalid-feedback">          
+                              <div>this field is required</div>
+                          </div>
                         </div>
-                   </div>        
+                   </div>       
+                   
+                   <div class="form-group">
+                    <label class="col-md-4 control-label" for="wardsachibSignature">Signature:</label>  
+                    <div class="col-md-4">
+                      <input name="wardsachibSignature" type="text" [(ngModel)]="propertyModel.wardsachibSignature" #wardsachibSignature="ngModel"
+                      [ngClass]="{'is-invalid':userForm.submitted && wardsachibSignature.invalid}" 
+                       placeholder="wardsachibSignature" class="form-control input-md" required/>
+                       <div class="invalid-feedback">          
+                          <div>this field is required</div>
+                      </div>
+                    </div>
+               </div>        
+    
        
         <div class="form-group">
           <label class="col-md-4 control-label" for="Save"></label>

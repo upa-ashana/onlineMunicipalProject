@@ -11,16 +11,16 @@ export class TransferService {
     this.token = localStorage.getItem('token');
 
   }
-  addTransfer(userModel){
-    let userAddUrl = APIConstants.PROPERTY_NAMSARI_URL+"/saveTransfer";
-    let getHeaders = new Headers({'authorization':'Bearer '+this.token});
-    return this.http.post(userAddUrl, userModel, {headers: getHeaders});
+  addTransfer(transferModel){
+    let transferAddUrl = APIConstants.PROPERTY_NAMSARI_URL+"/save";
+    let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
+    return this.http.post(transferAddUrl, transferModel, {headers: getHeaders});
   }
 
-  getAllTransfers(){
-    let getAllUserUrl = APIConstants.PROPERTY_NAMSARI_URL+"/list";
+  getAllTransfer(){
+    let getAllTransferUrl = APIConstants.PROPERTY_NAMSARI_URL+"/list";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token});
-    return this.http.get(getAllUserUrl, {headers: getHeaders});
+    return this.http.get(getAllTransferUrl, {headers: getHeaders});
   }
 
   deleteTransfer(id){
@@ -30,8 +30,8 @@ export class TransferService {
   }
 
   getTransferById(id){
-    let findUserById = APIConstants.PROPERTY_NAMSARI_URL+"/"+id;
+    let findTransferById = APIConstants.PROPERTY_NAMSARI_URL+"/"+id;
     let getHeaders = new Headers({'authorization':'Bearer '+this.token});
-    return this.http.get(findUserById,{headers:getHeaders});
+    return this.http.get(findTransferById,{headers:getHeaders});
   }
 }

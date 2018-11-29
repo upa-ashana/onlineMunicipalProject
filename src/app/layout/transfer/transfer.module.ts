@@ -7,9 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { TransferRoutingModule } from './transfer-routing.module';
 import { TransferService } from './transfer.service';
+import { NgxDatatableModule, DatatableComponent } from '@swimlane/ngx-datatable';
 @NgModule({
   imports: [
-    CommonModule, FormsModule, HttpModule, TransferRoutingModule
+    CommonModule, FormsModule, HttpModule, TransferRoutingModule, NgxDatatableModule
   ],
   declarations: [AddTransferComponent, ViewTransferComponent,EditTransferComponent],
   providers:[TransferService]

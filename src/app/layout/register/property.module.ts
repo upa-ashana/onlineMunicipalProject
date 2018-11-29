@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { PropertyRoutingModule } from './property-routing.module';
 import { PropertyService } from './property.service';
-//import { NgxDatatableModule, DatatableComponent } from '@swimlane/ngx-datatable';
+import { NgxDatatableModule, DatatableComponent } from '@swimlane/ngx-datatable';
 @NgModule({
   imports: [
-    CommonModule, FormsModule, HttpModule, PropertyRoutingModule,// NgxDatatableModule
+    CommonModule, FormsModule, HttpModule, PropertyRoutingModule,NgxDatatableModule
   ],
   declarations: [AddPropertyComponent, ViewPropertyComponent, EditPropertyComponent ],
   providers:[PropertyService]

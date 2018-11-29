@@ -16,4 +16,5 @@ export class PropertyModel {
     public registerDate:Date;
     public registrationFee:number;
     public ownerSignature:String;
+    public userRegisterPropertyList:any;
 }

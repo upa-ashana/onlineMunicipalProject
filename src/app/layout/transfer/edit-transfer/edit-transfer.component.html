@@ -1,3 +1,260 @@
-<p>
-  edit-transfer works!
-</p>
+
+
+<div class="panel panel-info" style="margin-top: 40px; background: #F0F0F0">
+    
+    <div class="panel-heading" style="background:#222222;height:40px">
+      <h4 style="text-align: center; color: white;padding-top:5px">Edit Property Tansfer</h4>
+    </div>  
+    
+     <form  name="addtransferform" class="form-horizontal" (ngSubmit)="updateTransfer()"  #userForm="ngForm" novalidate>
+      <fieldset>  
+         <div class="form-group">
+          <label class="col-md-4 control-label" for="giverName">GiverName:</label>  
+          <div class="col-md-4">
+            <input  name="giverName" type="text" [(ngModel)]="transferModel.giverName" #giverName="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && giverName.invalid}" 
+            placeholder="giverName" class="form-control input-md" required/>
+            <div class="invalid-feedback">          
+                <div>this field is required</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="giverMobileNo">Giver Mobile :</label>  
+          <div class="col-md-4">
+            <input name="giverMobileNo" type="text" [(ngModel)]="transferModel.giverMobileNo" #giverMobileNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && giverMobileNo.invalid}" 
+             placeholder="giverMobileNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+             </div>
+          </div>
+        </div>      
+  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="giverCitizenNo">Giver Citizen:</label>  
+          <div class="col-md-4">  
+            <input type="text" name="giverCitizenNo" [(ngModel)]="transferModel.giverCitizenNo" #giverCitizenNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && giverCitizenNo.invalid}" 
+             placeholder="giverCitizenNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="giverRegion">Giver Region:</label>
+          <div class="col-md-4">
+            <input name="giverRegion" type="text" [(ngModel)]="transferModel.giverRegion" #giverRegion="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && giverRegion.invalid}" 
+            placeholder="giverRegion" class="form-control input-md" required/>
+            <div class="invalid-feedback">          
+                <div>this field is required</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="giverWardNo">Giver WardNo:</label>  
+          <div class="col-md-4">
+            <input  name="giverWardNo" type="number" [(ngModel)]="transferModel.giverWardNo" #giverWardNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && giverWardNo.invalid}" 
+              placeholder="WardNo" class="form-control input-md" required/>
+              <div class="invalid-feedback">          
+                  <div>this field is required</div>
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="giverSignature">Giver Signature:</label>  
+            <div class="col-md-4">
+              <input name="giverSignature" type="text" [(ngModel)]="transferModel.giverSignature" #giverSignature="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && giverSignature.invalid}" 
+               placeholder="giverSignature" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+                </div>
+            </div>
+          </div>
+
+
+         <div class="form-group">
+            <label class="col-md-4 control-label" for="takerName">Taker Name:</label>  
+            <div class="col-md-4">
+              <input name="takerName" type="text" [(ngModel)]="transferModel.takerName" #takerName="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && takerName.invalid}" 
+               placeholder="takerName" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="takerMobileNo">Taker Moble:</label>  
+            <div class="col-md-4">
+              <input name="takerMobileNo" type="text" [(ngModel)]="transferModel.takerMobileNo" #takerMobileNo="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && takerMobileNo.invalid}" 
+               placeholder="takerMobileNo" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+                </div>
+            </div>
+          </div>      
+    
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="takerCitizenNo" style="margin-top:20px">Taker Citizen:</label>  
+            <div class="col-md-4">  
+              <input type="text" name="takerCitizenNo" [(ngModel)]="transferModel.takerCitizenNo" #takerCitizenNo="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && takerCitizenNo.invalid}" 
+               placeholder="takerCitizenNo" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+               </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="takerRegion">Taker Region:</label>
+            <div class="col-md-4">
+              <input name="takerRegion" type="text" [(ngModel)]="transferModel.takerRegion" #takerRegion="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && takerRegion.invalid}" 
+               placeholder="takerRegion" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+                </div>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="takerWardNo">Taker WardNo:</label>  
+            <div class="col-md-4">
+              <input name="takerWardNo" type="number" [(ngModel)]="transferModel.takerWardNo" #takerWardNo="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && takerWardNo.invalid}" 
+                 placeholder="WardNo" class="form-control input-md" required/>
+                 <div class="invalid-feedback">          
+                    <div>this field is required</div>
+                 </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-md-4 control-label" for="takerSignature">Taker Signature:</label>  
+              <div class="col-md-4">
+                <input name="takerSignature" type="text" [(ngModel)]="transferModel.takerSignature"
+                 #takerSignature="ngModel" [ngClass]="{'is-invalid':userForm.submitted && takerSignature.invalid}" 
+                   placeholder="takerSignature" class="form-control input-md" required/>
+                   <div class="invalid-feedback">          
+                      <div>this field is required</div>
+                    </div>
+              </div>
+            </div>
+                
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="kittaNo">Kitta Number:</label>  
+          <div class="col-md-4">
+            <input name="kittaNo" type="number" [(ngModel)]="transferModel.kittaNo" #kittaNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && kittaNo.invalid}" 
+             placeholder="KittaNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+             </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="houseNo">House Number:</label>  
+          <div class="col-md-4">
+            <input name="houseNo" type="number" [(ngModel)]="transferModel.houseNo" #houseNo="ngModel"
+            [ngClass]="{'is-invalid':userForm.submitted && houseNo.invalid}" 
+             placeholder="HouseNo" class="form-control input-md" required/>
+             <div class="invalid-feedback">          
+                <div>this field is required</div>
+             </div>
+          </div>
+        </div>  
+                     
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="houseArea">House Area:</label>  
+            <div class="col-md-4">
+              <input name="houseArea" type="number" [(ngModel)]="transferModel.houseArea" #houseArea="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && houseArea.invalid}" 
+               placeholder="houseArea" class="form-control input-md" required/>
+               <div class="invalid-feedback">          
+                  <div>this field is required</div>
+               </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-md-4 control-label" for="landArea">Land Area:</label>  
+              <div class="col-md-4">
+                <input name="landArea" type="number" [(ngModel)]="transferModel.landArea" #landArea="ngModel"
+                [ngClass]="{'is-invalid':userForm.submitted && landArea.invalid}" 
+                 placeholder="LandArea" class="form-control input-md" required/>
+                 <div class="invalid-feedback">          
+                    <div>this field is required</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="noOfAnna">No of Anna:</label>  
+                <div class="col-md-4">
+                  <input name="noOfAnna" type="number" [(ngModel)]="transferModel.noOfAnna" #noOfAnna="ngModel"
+                  [ngClass]="{'is-invalid':userForm.submitted && noOfAnna.invalid}" 
+                   placeholder="noOfAnna" class="form-control input-md" required/>
+                   <div class="invalid-feedback">          
+                      <div>this field is required</div>
+                    </div>
+                </div>
+              </div>
+                  
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="date">Transfer Date:</label>  
+                    <div class="col-md-4">
+                      <input name="date" type="date" [(ngModel)]="transferModel.date" #date="ngModel"
+                      [ngClass]="{'is-invalid':userForm.submitted && date.invalid}" 
+                       placeholder="Date" class="form-control input-md" required/>
+                       <div class="invalid-feedback">          
+                          <div>this field is required</div>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="form-group">
+                      <label class="col-md-4 control-label" for="transferFee">Transfer Fee:</label>  
+                      <div class="col-md-4">
+                        <input name="transferFee" type="number" [(ngModel)]="transferModel.transferFee" 
+                        #transferFee="ngModel" [ngClass]="{'is-invalid':userForm.submitted && transferFee.invalid}" 
+                        placeholder="transferFee" class="form-control input-md" required/>
+                        <div class="invalid-feedback">          
+                            <div>this field is required</div>
+                        </div>
+                      </div>
+                   </div>
+                  <div class="form-group">
+                        <label class="col-md-4 control-label" for="wardSachibSignature">Signature:</label>  
+                        <div class="col-md-4">
+                          <input name="wardSachibSignature" type="text" [(ngModel)]="transferModel.wardSachibSignature"
+                          #wardSachibSignature="ngModel" [ngClass]="{'is-invalid':userForm.submitted && 
+                          wardSachibSignature.invalid}" placeholder="wardSachibSignature" 
+                          class="form-control input-md" required/>
+                          <div class="invalid-feedback">          
+                              <div>this field is required</div>
+                          </div>
+                        </div>
+                   </div>        
+       
+                   <div class="form-group">
+                    <label class="col-md-4 control-label" for="update"></label>
+                    <div class="col-md-8">
+                      <button id="Save" name="update" class="btn btn-success">Update</button>
+                      <button id="Cancel" name="Cancel" class="btn btn-danger">Cancel</button>
+                    </div>
+                  </div>
+      </fieldset>
+    </form>
+  </div>
+   

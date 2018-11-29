@@ -1,0 +1,42 @@
+<div class="card mb-12">
+  <div class="card-header">House Record</div>
+  <div class="card-body table-responsive">
+      <input
+      type='text'
+      style='padding:8px;margin:15px auto;width:30%;'
+      placeholder='Type to filter the name column...'
+      (keyup)='updateFilter($event)'/>
+
+    <ngx-datatable #table class='bootstrap'
+    [rows]="rows" 
+    [columns]="columns" 
+    [loadingIndicator]="loadingIndicator"
+    [columnMode]="'force'"
+    [limit]="10"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="'auto'"
+    >
+    <ngx-datatable-column name="houseInfoId"></ngx-datatable-column>
+    <ngx-datatable-column name="houseNo"></ngx-datatable-column>
+    <ngx-datatable-column name="wardNo"></ngx-datatable-column>
+    <ngx-datatable-column name="streetName"></ngx-datatable-column>
+    <ngx-datatable-column name="houseArea"></ngx-datatable-column>
+    <ngx-datatable-column name="housePrice"></ngx-datatable-column>     
+    <ngx-datatable-column name="totalHouseValue"></ngx-datatable-column>     
+
+
+    <ngx-datatable-column name="Action" prop="houseInfoId" [sortable]="false" *ngIf="role === 'admin'">
+        <ng-template let-rowIndex="rowIndex" let-id="houseInfoId" let-value="value" ngx-datatable-cell-template>
+            <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/house/edithouse/'+value]">
+              <i class="fa fa-edit"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-danger actionBtn" (click)="deleteHouse(value)">
+                <i class="fa fa-trash"></i> Delete
+            </button>
+        </ng-template> 
+    </ngx-datatable-column> 
+    
+    </ngx-datatable>     
+  </div>
+</div>

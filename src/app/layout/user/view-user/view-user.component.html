@@ -1,5 +1,5 @@
-<!--<div class="card mb-12">
-    <div class="card-header">Striped Rows</div>
+    <div class="card mb-12">
+    <div class="card-header">User Record</div>
     <div class="card-body table-responsive">
         <input
         type='text'
@@ -17,7 +17,7 @@
       [footerHeight]="50"
       [rowHeight]="'auto'"
       >
-      <ngx-datatable-column name="Iduser"></ngx-datatable-column>
+      <ngx-datatable-column name="userId"></ngx-datatable-column>
       <ngx-datatable-column name="First Name"></ngx-datatable-column>
       <ngx-datatable-column name="Last Name"></ngx-datatable-column>
       <ngx-datatable-column name="UserName"></ngx-datatable-column>
@@ -29,8 +29,8 @@
       <ngx-datatable-column name="Role"></ngx-datatable-column>    
 
   
-      <ngx-datatable-column name="Action" prop="iduser" [sortable]="false" *ngIf="userRole === 'admin'">
-          <ng-template let-rowIndex="rowIndex" let-id="iduser" let-value="value" ngx-datatable-cell-template>
+      <ngx-datatable-column name="Action" prop="userId" [sortable]="false" *ngIf="role === 'admin'">
+          <ng-template let-rowIndex="rowIndex" let-id="userId" let-value="value" ngx-datatable-cell-template>
               <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/user/edituser/'+value]">
                 <i class="fa fa-edit"></i> Edit
               </button>
@@ -42,4 +42,4 @@
       
       </ngx-datatable>     
     </div>
-  </div>-->
+  </div>

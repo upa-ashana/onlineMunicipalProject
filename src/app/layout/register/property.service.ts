@@ -11,16 +11,16 @@ export class PropertyService {
     this.token = localStorage.getItem('token');
 
   }
-  addproperty(userModel){
-    let userAddUrl = APIConstants.PROPERTY_REGISTRATION_URL+"/saveproperty";
-    let getHeaders = new Headers({'authorization':'Bearer '+this.token});
-    return this.http.post(userAddUrl, userModel, {headers: getHeaders});
+  addproperty(propertyModel){
+    let PropertyAddUrl = APIConstants.PROPERTY_REGISTRATION_URL+"/save";
+    let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
+    return this.http.post(PropertyAddUrl, propertyModel, {headers: getHeaders});
   }
 
   getAllproperty(){
-    let getAllUserUrl = APIConstants.PROPERTY_REGISTRATION_URL+"/list";
+    let getAllPopertyUrl = APIConstants.PROPERTY_REGISTRATION_URL+"/list";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token});
-    return this.http.get(getAllUserUrl, {headers: getHeaders});
+    return this.http.get(getAllPopertyUrl, {headers: getHeaders});
   }
 
   deleteProperty(id){

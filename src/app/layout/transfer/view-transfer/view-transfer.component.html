@@ -1,3 +1,57 @@
-<p>
-  view-transfer works!
-</p>
+
+    <div class="card mb-12">
+    <div class="card-header">Property Transfer Record</div>
+    <div class="card-body table-responsive">
+        <input
+        type='text'
+        style='padding:8px;margin:15px auto;width:30%;'
+        placeholder='Type to filter the name column...'
+        (keyup)='updateFilter($event)'/>
+  
+      <ngx-datatable #table class='bootstrap'
+      [rows]="rows" 
+      [columns]="columns" 
+      [loadingIndicator]="loadingIndicator"
+      [columnMode]="'force'"
+      [limit]="10"
+      [headerHeight]="50"
+      [footerHeight]="50"
+      [rowHeight]="'auto'"
+      >
+      <ngx-datatable-column name="propertyNamsariId"></ngx-datatable-column>
+      <ngx-datatable-column name="giverName"></ngx-datatable-column>
+      <ngx-datatable-column name="giverMobileNo"></ngx-datatable-column>
+      <ngx-datatable-column name="giverCitizenNo"></ngx-datatable-column>
+      <ngx-datatable-column name="giverRegion"></ngx-datatable-column>
+      <ngx-datatable-column name="giverWardNo"></ngx-datatable-column>     
+      <ngx-datatable-column name="giverSignature"></ngx-datatable-column>
+      <ngx-datatable-column name="takerName"></ngx-datatable-column>
+      <ngx-datatable-column name="takerMobileNo"></ngx-datatable-column>
+      <ngx-datatable-column name="takerCitizenNo"></ngx-datatable-column>  
+      <ngx-datatable-column name="takerRegion"></ngx-datatable-column>
+      <ngx-datatable-column name="takerWardNo"></ngx-datatable-column>
+      <ngx-datatable-column name="takerSignature"></ngx-datatable-column>
+      <ngx-datatable-column name="houseNo"></ngx-datatable-column>
+      <ngx-datatable-column name="houseArea"></ngx-datatable-column>
+      <ngx-datatable-column name="landArea"></ngx-datatable-column>     
+      <ngx-datatable-column name="noOfAnna"></ngx-datatable-column>
+      <ngx-datatable-column name="date"></ngx-datatable-column>     
+      <ngx-datatable-column name="transferFee"></ngx-datatable-column>
+      <ngx-datatable-column name="wardsachibSignature"></ngx-datatable-column>
+      <ngx-datatable-column name="userDoNamsariList"></ngx-datatable-column>       
+
+  
+      <ngx-datatable-column name="Action" prop="propertyNamsariId" [sortable]="false" *ngIf="role === 'admin'">
+          <ng-template let-rowIndex="rowIndex" let-id="propertyNamsariId" let-value="value" ngx-datatable-cell-template>
+              <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/transfer/edittrasnfer/'+value]">
+                <i class="fa fa-edit"></i> Edit
+              </button>
+              <button class="btn btn-sm btn-danger actionBtn" (click)="deleteTransfer(value)">
+                  <i class="fa fa-trash"></i> Delete
+              </button>
+          </ng-template> 
+      </ngx-datatable-column> 
+      
+      </ngx-datatable>     
+    </div>
+  </div> 

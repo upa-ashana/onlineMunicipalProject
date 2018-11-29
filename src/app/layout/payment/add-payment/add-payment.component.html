@@ -1,0 +1,57 @@
+<div class="panel panel-info" style="margin-top: 40px; background: #F0F0F0">
+    <!-- Default panel contents -->
+    <div class="panel-heading" style="background:#222222;height:40px">
+      <h4 style="text-align: center; color: white;padding-top:5px">Payment</h4>
+    </div>  
+    
+     <form name=" paymentform" class="form-horizontal" (ngSubmit)="addPayment()" >
+      <fieldset>
+         <div class="form-group">
+          <label class="col-md-4 control-label" for="paymentType">Payment Type</label>  
+          <div class="col-md-4">
+            <input  type="text" [(ngModel)]="PaymentModel.paymentType"  
+            name="paymentType"   placeholder="Payment Type" class="form-control input-md">
+          </div>
+        </div>  
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="currentYearAmount">currentYearAmount</label>  
+          <div class="col-md-4">
+            <input  type="number" [(ngModel)]="PaymentModel.currentYearAmount" 
+            name="currentYearAmount" class="form-control input-md">
+          </div>
+        </div>      
+  
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="dueAmount">Due Amount</label>  
+          <div class="col-md-4">  
+            <input type="number" name="dueAmount" [(ngModel)]="PaymentModel.dueAmount" class="form-control input-md">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="totalPaymentAmount">Total Payment Amount</label>  
+          <div class="col-md-4">
+            <input type="number" name="totalPaymentAmount" [(ngModel)]="PaymentModel.totalPaymentAmount" 
+               class="form-control input-md" />
+          </div>
+        </div>
+  
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="paymentDate">Payment Date</label>
+            <div class="col-md-4">
+              <input type="date" [(ngModel)]="PaymentModel.paymentDate" 
+              name="paymentDate" class="form-control input-md" />
+            </div>
+          </div>      
+               
+       <div class="form-group">
+        <label class="col-md-4 control-label" for="Pay"></label>
+        <div class="col-md-8">
+          <button id="Pay" name="Pay" type="ngSubmit" class="btn btn-success">Pay</button>
+          <button id="Cancel" name="Cancel" class="btn btn-danger">Cancel</button>
+        </div>
+      </div>
+      </fieldset>
+    </form>
+  </div> 

@@ -1,12 +1,21 @@
 <div class="login-page" [@routerTransition]>
     <div class="row justify-content-md-center">
         <div class="col-md-4">
-            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
-            <h1>SB Admin BS4 Angular5</h1>
+            <img class="user-avatar" src="assets/images/nepal.svg" width="150px" />
+            <h1>Online Property Registration and Tax Payment</h1>
             <form role="form">
                 <div class="form-content">
+                       
                     <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="Full Name">
+                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group">
+                            <input type="text" class="form-control input-underline input-lg" id="" placeholder="Last Name">
+                   </div>
+
+                   <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="User Name">
                     </div>
 
                     <div class="form-group">
@@ -19,6 +28,48 @@
                     <div class="form-group">
                         <input type="password" class="form-control input-underline input-lg" id="" placeholder="Repeat Password">
                     </div>
+
+                    <div class="form-group">
+                            <input type="text" class="form-control input-underline input-lg" id="" placeholder="Address">
+                    </div>
+
+                    <div class="form-group">
+                            <input type="text" class="form-control input-underline input-lg" id="" placeholder="Contact">
+                    </div>
+
+                    <!-- <div class="form-group">
+                    <label class="radio-inline">
+                            <input type="radio" value="M" name="gender" class="form-control input-underline input-lg" id="" >
+                            Male
+                    </label>
+                    <label class="radio-inline">
+                            <input type="radio" value="F" name="gender" class="form-control input-underline input-lg" id="" >
+                            Female
+                    </label>
+                    </div> -->
+
+                    <div class="form-group">
+                            <label class="col-md-4 control-label">Gender</label>
+                            <div class="col-md-4">
+                              <label class="radio-inline">
+                                <input type="radio" value="M" name="gender">
+                                Male
+                              </label>
+                           
+                              <label class="radio-inline">
+                                <input type="radio" value ="F" name="gender" >
+                                Female
+                              </label>  
+                              </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select class="form-control input-underline input-lg" id="">
+                            <option value="admin" >Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+
                 </div>
                 <a class="btn rounded-btn" [routerLink]="['/dashboard']"> Register </a>&nbsp;
                 <a class="btn rounded-btn" [routerLink]="['/login']"> Log in </a>

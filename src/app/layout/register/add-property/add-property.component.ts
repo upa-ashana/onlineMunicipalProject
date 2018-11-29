@@ -10,12 +10,12 @@ export class AddPropertyComponent implements OnInit {
 
   propertyModel:PropertyModel = new PropertyModel();
 
-  constructor(private userService:PropertyService) { }
+  constructor(private propertyService:PropertyService) { }
 
   ngOnInit() {
   }
   addProperty(){
-    this.userService.addproperty(this.propertyModel).subscribe(
+    this.propertyService.addproperty(this.propertyModel).subscribe(
       data=>{
         console.log(data);
         let added = JSON.parse(JSON.parse(JSON.stringify(data))._body);

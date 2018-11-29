@@ -10,6 +10,7 @@ import { UserService } from '../user.service';
 })
 export class AddUserComponent implements OnInit {
   userModel:UserModel = new UserModel();
+  model:any={}
 
   constructor(private userService:UserService) { }
 
