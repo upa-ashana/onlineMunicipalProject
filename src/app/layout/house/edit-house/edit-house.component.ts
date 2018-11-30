@@ -31,7 +31,7 @@ export class EditHouseComponent implements OnInit {
   }
 
   editHouse() {
-    this.houseService.addHouse(this.houseModel).subscribe(
+    this.houseService.updateHouse(this.houseModel).subscribe(
       data => {
           this.router.navigate(['/house/viewhouse']);
       }

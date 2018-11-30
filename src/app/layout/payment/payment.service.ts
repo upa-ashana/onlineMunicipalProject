@@ -12,7 +12,6 @@ export class PaymentService {
     this.token = localStorage.getItem('token');
 
   }
-
   addPayment(paymentModel){
     let paymentAddUrl = APIConstants.PROPERTY_TAX_PAYMENT_URL+"/save";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
@@ -24,7 +23,6 @@ export class PaymentService {
     let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
       return this.http.post(paymentUpdateUrl, paymentModel, {headers: getHeaders});
   }
-
 
   getAllPayment(){
     let getAllPaymentUrl = APIConstants.PROPERTY_TAX_PAYMENT_URL+"/list";

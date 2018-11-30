@@ -6,7 +6,7 @@ import { EditHouseComponent } from './edit-house/edit-house.component';
 const routes:Routes=[
   {path: '', component: AddHouseComponent},
   {path: 'addhouse', component: AddHouseComponent},
-  {path: 'edithouse', component: EditHouseComponent},
+  {path: 'edithouse/:id', component: EditHouseComponent},
   {path: 'viewhouse', component: ViewHouseComponent}
 ];
 @NgModule({

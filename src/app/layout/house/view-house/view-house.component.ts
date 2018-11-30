@@ -69,7 +69,7 @@ export class ViewHouseComponent implements OnInit {
     )
    }
 
-   editUser(id){
+   editHouse(id){
      this.router.navigateByUrl('house/edithouse/'+id);
   }
 

@@ -30,7 +30,7 @@ export class EditLandComponent implements OnInit {
   }
 
   editLand() {
-    this.landService.addLand(this.landModel).subscribe(
+    this.landService.updateLand(this.landModel).subscribe(
       data => {
           this.router.navigate(['/land/viewland']);
       }

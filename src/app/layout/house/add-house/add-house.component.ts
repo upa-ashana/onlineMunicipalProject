@@ -17,14 +17,14 @@ export class AddHouseComponent implements OnInit {
   }
 
   addHouse(){
-    console.log(this.houseModel)
-    // this.houseService.addHouse(this.houseModel).subscribe(
-    //   data=>{
-    //     console.log(data);
-    //     let added = JSON.parse(JSON.parse(JSON.stringify(data))._body);
-    //     console.log(added);
-    // }
-    // )
+    //console.log(this.houseModel)
+    this.houseService.addHouse(this.houseModel).subscribe(
+      data=>{
+        console.log(data);
+        let added = JSON.parse(JSON.parse(JSON.stringify(data))._body);
+        console.log(added);
+    }
+    )
   }
 
 }

@@ -25,7 +25,7 @@
     <ngx-datatable-column name="Land Quality"></ngx-datatable-column>     
     <ngx-datatable-column name="Total Land Value"></ngx-datatable-column>
   
-    <ngx-datatable-column name="Action" prop="landInfoId" [sortable]="false" *ngIf="role === 'admin'">
+    <ngx-datatable-column name="Action" prop="landInfoId" [sortable]="false" >
         <ng-template let-rowIndex="rowIndex" let-id="landInfoId" let-value="value" ngx-datatable-cell-template>
             <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/land/editland/'+value]">
               <i class="fa fa-edit"></i> Edit
