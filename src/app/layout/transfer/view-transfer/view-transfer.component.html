@@ -41,7 +41,7 @@
       <ngx-datatable-column name="userDoNamsariList"></ngx-datatable-column>       
 
   
-      <ngx-datatable-column name="Action" prop="propertyNamsariId" [sortable]="false" *ngIf="role === 'admin'">
+      <ngx-datatable-column name="Action" prop="propertyNamsariId" [sortable]="false" >
           <ng-template let-rowIndex="rowIndex" let-id="propertyNamsariId" let-value="value" ngx-datatable-cell-template>
               <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/transfer/edittrasnfer/'+value]">
                 <i class="fa fa-edit"></i> Edit

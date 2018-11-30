@@ -19,6 +19,13 @@ export class PaymentService {
       return this.http.post(paymentAddUrl, paymentModel, {headers: getHeaders});
   }
 
+  updatePayment(paymentModel){
+    let paymentUpdateUrl = APIConstants.PROPERTY_TAX_PAYMENT_URL+"/update";
+    let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
+      return this.http.post(paymentUpdateUrl, paymentModel, {headers: getHeaders});
+  }
+
+
   getAllPayment(){
     let getAllPaymentUrl = APIConstants.PROPERTY_TAX_PAYMENT_URL+"/list";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token});

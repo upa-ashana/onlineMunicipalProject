@@ -24,7 +24,8 @@ export class ViewUserComponent implements OnInit {
      { name: 'address' },
      { name: 'phone' },
      { name: 'gender' },
-     { name: 'role' }
+     { name: 'role' },
+     { name:'action'}
    
    ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HouseModule } from '../house.module';
 import { HouseService } from '../house.service';
+import { HouseModel } from '../house-model';
 
 @Component({
   selector: 'app-add-house',
@@ -8,7 +9,7 @@ import { HouseService } from '../house.service';
   styleUrls: ['./add-house.component.scss']
 })
 export class AddHouseComponent implements OnInit {
- houseModel:HouseModule= new HouseModule();
+ houseModel:HouseModel= new HouseModel();
 
   constructor(private houseService:HouseService) { }
 
@@ -16,13 +17,14 @@ export class AddHouseComponent implements OnInit {
   }
 
   addHouse(){
-    this.houseService.addHouse(this.houseModel).subscribe(
-      data=>{
-        console.log(data);
-        let added = JSON.parse(JSON.parse(JSON.stringify(data))._body);
-        console.log(added);
-    }
-    )
+    console.log(this.houseModel)
+    // this.houseService.addHouse(this.houseModel).subscribe(
+    //   data=>{
+    //     console.log(data);
+    //     let added = JSON.parse(JSON.parse(JSON.stringify(data))._body);
+    //     console.log(added);
+    // }
+    // )
   }
 
 }

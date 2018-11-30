@@ -5,9 +5,9 @@ import { ViewLandComponent } from './view-land/view-land.component';
 import { EditLandComponent } from './edit-land/edit-land.component';
 const routes:Routes=[
   {path: '', component: AddLandComponent},
-  {path: 'addhouse', component: AddLandComponent},
-  {path: 'edithouse', component: EditLandComponent},
-  {path: 'viewuser', component: ViewLandComponent}
+  {path: 'addland', component: AddLandComponent},
+  {path: 'editland', component: EditLandComponent},
+  {path: 'viewland', component: ViewLandComponent}
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes) ],

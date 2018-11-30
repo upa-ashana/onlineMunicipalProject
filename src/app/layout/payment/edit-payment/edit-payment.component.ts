@@ -18,6 +18,7 @@ export class EditPaymentComponent implements OnInit {
         params => {
           this.paymentService.getPaymentById(params.id).subscribe(
             data => {
+              console.log(data)
               this.paymentModel = JSON.parse(JSON.parse(JSON.stringify(data))._body);          
             }
           );
@@ -29,7 +30,7 @@ export class EditPaymentComponent implements OnInit {
   }
 
   editPayment() {
-    this.paymentService.addPayment(this.paymentModel).subscribe(
+    this.paymentService.updatePayment(this.paymentModel).subscribe(
       data => {
           this.router.navigate(['/payment/viewpayment']);
       }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LandModule} from '../land.module';
 import { LandService } from '../land.service';
+import { LandModel } from '../land-model';
 
 @Component({
   selector: 'app-add-land',
@@ -8,7 +9,7 @@ import { LandService } from '../land.service';
   styleUrls: ['./add-land.component.scss']
 })
 export class AddLandComponent implements OnInit {
-  landModel:LandModule= new LandModule();
+  landModel:LandModel= new LandModel();
 
   constructor(private landService:LandService) { }
 

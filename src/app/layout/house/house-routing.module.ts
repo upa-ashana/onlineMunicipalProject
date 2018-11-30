@@ -7,10 +7,13 @@ const routes:Routes=[
   {path: '', component: AddHouseComponent},
   {path: 'addhouse', component: AddHouseComponent},
   {path: 'edithouse', component: EditHouseComponent},
-  {path: 'viewuser', component: ViewHouseComponent}
+  {path: 'viewhouse', component: ViewHouseComponent}
 ];
 @NgModule({
-  imports: [RouterModule.forChild(routes) ],
+  imports: [
+    RouterModule.forChild(routes) 
+  
+  ],
   exports: [RouterModule]
   
 })

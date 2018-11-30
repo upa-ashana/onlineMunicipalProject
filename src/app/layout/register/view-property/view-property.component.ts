@@ -76,7 +76,7 @@ deleteProperty(id){
     data=>{
       console.log("Property Deleted Sucessfully!");
       this.getAllProperty();
-      // this.rows = this.rows.filter(item => item.propertyRegistrationId !== id);
+       this.rows = this.rows.filter(item => item.propertyRegistrationId !== id);
     }
   )
 }

@@ -36,6 +36,7 @@ export class ViewPaymentComponent implements OnInit {
   getAllPayment(){
     this.paymentService.getAllPayment().subscribe(
       data=>{
+       
         this.paymentModels = JSON.parse(JSON.parse(JSON.stringify(data))._body);
         this.rows = this.paymentModels;
         this.temp = [...this.paymentModels];

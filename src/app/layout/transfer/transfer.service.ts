@@ -17,6 +17,13 @@ export class TransferService {
     return this.http.post(transferAddUrl, transferModel, {headers: getHeaders});
   }
 
+  updateTransfer(transferModel){
+    let transferUpdateUrl = APIConstants.PROPERTY_NAMSARI_URL+"/update";
+    let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
+    return this.http.post(transferUpdateUrl, transferModel, {headers: getHeaders});
+  }
+
+
   getAllTransfer(){
     let getAllTransferUrl = APIConstants.PROPERTY_NAMSARI_URL+"/list";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token});

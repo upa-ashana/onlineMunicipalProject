@@ -26,10 +26,12 @@
       <ngx-datatable-column name="Address"></ngx-datatable-column>
       <ngx-datatable-column name="User Phone"></ngx-datatable-column>
       <ngx-datatable-column name="Gender"></ngx-datatable-column>
-      <ngx-datatable-column name="Role"></ngx-datatable-column>    
+      <ngx-datatable-column name="Role"></ngx-datatable-column>   
+      <!-- <ngx-datatable-column name="action"></ngx-datatable-column>     -->
 
+      
   
-      <ngx-datatable-column name="Action" prop="userId" [sortable]="false" *ngIf="role === 'admin'">
+      <ngx-datatable-column name="Action" prop="userId" [sortable]="false">
           <ng-template let-rowIndex="rowIndex" let-id="userId" let-value="value" ngx-datatable-cell-template>
               <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/user/edituser/'+value]">
                 <i class="fa fa-edit"></i> Edit

@@ -29,8 +29,8 @@ export class EditTransferComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateUser() {
-    this.transferService.addTransfer(this.transferModel).subscribe(
+  updateTransfer() {
+    this.transferService.updateTransfer(this.transferModel).subscribe(
       data => {
           this.router.navigate(['/transfer/viewtransfer']);
       }

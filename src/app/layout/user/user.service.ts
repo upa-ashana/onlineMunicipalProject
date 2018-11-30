@@ -11,9 +11,16 @@ export class UserService {
 
   }
   addUser(userModel){
+    
     let userAddUrl = APIConstants.USER_URL+"/save";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
       return this.http.post(userAddUrl, userModel, {headers: getHeaders});
+  }
+  updateUser(userModel){
+    console.log(userModel)
+    let userUpdateUrl= APIConstants.USER_URL+"/update";
+    let getHeaders= new Headers({'authorization':'Bearer ' + this.token, 'content-type':'application/json'});
+    return this.http.put(userUpdateUrl,userModel, {headers:getHeaders});
   }
 
   getAllUsers(){

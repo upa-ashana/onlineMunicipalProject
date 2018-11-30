@@ -8,10 +8,11 @@ import { AddHouseComponent } from './add-house/add-house.component';
 import { EditHouseComponent } from './edit-house/edit-house.component';
 import { ViewHouseComponent } from './view-house/view-house.component';
 import { HouseService } from './house.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule, FormModule, HttpModule, HouseRoutingModule, NgxDatatableModule 
+    CommonModule, HttpModule, HouseRoutingModule, NgxDatatableModule, FormsModule 
   ],
   declarations: [AddHouseComponent, EditHouseComponent, ViewHouseComponent],
   providers:[HouseService]

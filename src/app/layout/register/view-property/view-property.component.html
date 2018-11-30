@@ -39,9 +39,9 @@
       <ngx-datatable-column name="userRegisterPropertyList"></ngx-datatable-column>       
 
   
-      <ngx-datatable-column name="Action" prop="propertyRegistrationId" [sortable]="false" *ngIf="role === 'admin'">
+      <ngx-datatable-column name="Action" prop="propertyRegistrationId" [sortable]="false" >
           <ng-template let-rowIndex="rowIndex" let-id="propertyRegistrationId" let-value="value" ngx-datatable-cell-template>
-              <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/property/editproperty/'+value]">
+              <button class="btn btn-sm btn-primary actionBtn" [routerLink]="['/register/editproperty/'+value]">
                 <i class="fa fa-edit"></i> Edit
               </button>
               <button class="btn btn-sm btn-danger actionBtn" (click)="deleteProperty(value)">

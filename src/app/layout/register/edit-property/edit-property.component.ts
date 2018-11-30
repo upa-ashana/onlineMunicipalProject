@@ -29,4 +29,12 @@ export class EditPropertyComponent implements OnInit {
   ngOnInit() {
   }
 
+  editProperty() {
+    this.propertyService.updateProperty(this.propertyModel).subscribe(
+      data => {
+          this.router.navigate(['/property/viewproperty']);
+      }
+    );
+  }
+
 }
