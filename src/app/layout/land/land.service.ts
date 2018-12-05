@@ -18,9 +18,10 @@ export class LandService {
   }
 
   updateLand(landModel){
-    let landUpdateUrl = APIConstants.LAND_INFO+"/save";
+    console.log(landModel)
+    let landUpdateUrl = APIConstants.LAND_INFO+"/update";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
-      return this.http.post(landUpdateUrl,landModel, {headers: getHeaders});
+      return this.http.put(landUpdateUrl,landModel, {headers: getHeaders});
   }
 
   getAllLand(){

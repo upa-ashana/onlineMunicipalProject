@@ -6,6 +6,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
+
 // import { AddHouseComponent } from './house/add-house/add-house.component';
 // import { EditHouseComponent } from './house/edit-house/edit-house.component';
 // import { ViewHouseComponent } from './house/view-house/view-house.component';
@@ -23,6 +24,6 @@ import { HeaderComponent } from './components/header/header.component';
         TranslateModule,
         NgbDropdownModule.forRoot()
     ],
-    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ]
+    declarations: [LayoutComponent, SidebarComponent, HeaderComponent,  ]
 })
 export class LayoutModule {}

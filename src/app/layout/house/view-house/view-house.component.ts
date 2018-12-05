@@ -62,7 +62,7 @@ export class ViewHouseComponent implements OnInit {
   deleteHouse(id){
      this.houseService.deleteHouse(id).subscribe(
       data=>{
-         console.log("User Deleted Sucessfully!");
+         console.log("house Deleted Sucessfully!");
         this.getAllHouse();
         this.rows = this.rows.filter(item => item.houseInfoId !== id);
       }

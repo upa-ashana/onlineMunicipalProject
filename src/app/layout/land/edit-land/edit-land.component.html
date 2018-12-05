@@ -10,28 +10,28 @@
        <div class="form-group">
         <label class="col-md-4 control-label" for="streetName">streetName</label>  
         <div class="col-md-4">
-          <input  type="text" name="streetName" [(ngModel)]="LandModel.streetName"  class="form-control input-md">
+          <input  type="text" name="streetName" [(ngModel)]="landModel.streetName"  class="form-control input-md">
         </div>
       </div>  
       
       <div class="form-group">
         <label class="col-md-4 control-label" for="noOfAnna">noOfAnna</label>  
         <div class="col-md-4">
-          <input  type="number" [(ngModel)]="LandModel.noOfAnna" name="noOfAnna" class="form-control input-md">
+          <input  type="number" [(ngModel)]="landModel.noOfAnna" name="noOfAnna" class="form-control input-md">
         </div>
       </div>      
 
       <div class="form-group">
         <label class="col-md-4 control-label" for="priceInAana">priceInAana</label>  
         <div class="col-md-4">  
-          <input type="number" name="priceInAana" [(ngModel)]="LandModel.priceInAana" class="form-control input-md">
+          <input type="number" name="priceInAana" [(ngModel)]="landModel.priceInAana" class="form-control input-md">
         </div>
       </div>
       
       <div class="form-group">
         <label class="col-md-4 control-label" for="landArea">landArea</label>  
         <div class="col-md-4">
-          <input type="number" name="landArea" [(ngModel)]="LandModel.landArea" 
+          <input type="number" name="landArea" [(ngModel)]="landModel.landArea" 
              class="form-control input-md" />
         </div>
       </div>
@@ -39,7 +39,7 @@
       <div class="form-group">
           <label class="col-md-4 control-label" for="landQuality">landQualitye</label>
           <div class="col-md-4">
-            <input type="text" [(ngModel)]="LandModel.landQuality" 
+            <input type="text" [(ngModel)]="landModel.landQuality" 
             name="landQuality" class="form-control input-md" />
           </div>
       </div> 
@@ -47,7 +47,7 @@
       <div class="form-group">
           <label class="col-md-4 control-label" for="totalLandValue">totalLandValue</label>
           <div class="col-md-4">
-            <input type="number" [(ngModel)]="LandModel.totalLandValue" 
+            <input type="number" [(ngModel)]="landModel.totalLandValue" 
             name="totalLandValue" class="form-control input-md" />
           </div>
       </div>      
@@ -56,7 +56,7 @@
       <label class="col-md-4 control-label" for="save"></label>
       <div class="col-md-8">
         <button id="save" name="save" type="ngSubmit" class="btn btn-success">Update</button>
-        <button id="Cancel" name="Cancel" class="btn btn-danger">Cancel</button>
+        <button id="Cancel" name="Cancel" class="btn btn-danger actionBtn" [routerLink]="['/dashboard']">Cancel</button>
       </div>
     </div>
     </fieldset>

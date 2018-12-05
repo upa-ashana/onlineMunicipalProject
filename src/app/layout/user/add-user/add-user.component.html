@@ -1,4 +1,4 @@
-<div class="panel panel-info" style="margin-top: 40px; background: #F0F0F0">
+<div class="panel panel-info" style="margin-top: 30px; background: #F0F0F0">
   <!-- Default panel contents -->
   <div class="panel-heading" style="background:#222222;height:40px">
     <h4 style="text-align: center; color: white;padding-top:5px">Add User</h4>
@@ -7,95 +7,81 @@
    <form name=" adduserform" class="form-horizontal" (ngSubmit)="addUser()"  #userForm="ngForm" novalidate>
     <fieldset>
        <div class="form-group">
-        <label class="col-md-4 control-label" for="firstName">FirstName</label>  
-        <div class="col-md-4">
+        <label class="col-md-4 control-label" for="firstName">FirstName</label>         
           <input  type="text" [(ngModel)]="userModel.firstName" #firstName="ngModel"
           [ngClass]="{'is-invalid':userForm.submitted && firstName.invalid}" 
-          name="firstName"   placeholder="firstname" class="form-control input-md" required>
+          name="firstName"   placeholder="firstname" class="form-control " required>
           <div class="invalid-feedback">          
           <div>please enter your first name</div>
-         </div>
-         </div>
+         </div>        
       </div>  
       
       <div class="form-group">
-        <label class="col-md-4 control-label" for="lastName">LastName</label>  
-        <div class="col-md-4">
+        <label class="col-md-4 control-label" for="lastName">LastName</label>          
           <input  type="text" [(ngModel)]="userModel.lastName" #lastName="ngModel"
           [ngClass]="{'is-invalid':userForm.submitted && lastName.invalid}" 
           name="lastName" placeholder="lastname" class="form-control input-md" required>
           <div class="invalid-feedback">         
               <div>please enter your last name</div>
-             </div>
-        </div>
+             </div>        
       </div>      
 
       <div class="form-group">
         <label class="col-md-4 control-label" for="userName">UserName</label>  
-        <div class="col-md-4">  
-          <input type="text" name="userName" [(ngModel)]="userModel.userName" #userName="ngModel"
-          [ngClass]="{'is-invalid':userForm.submitted && userName.invalid}" 
-           placeholder="UserName" class="form-control input-md" required>
-           <div class="invalid-feedback">          
+           <input type="text" name="userName" [(ngModel)]="userModel.userName" #userName="ngModel"
+              [ngClass]="{'is-invalid':userForm.submitted && userName.invalid}" 
+               placeholder="UserName" class="form-control input-md" required>
+             <div class="invalid-feedback">          
               <div>please enter your username</div>
-             </div>
-        </div>
+             </div>        
       </div>
       
       <div class="form-group">
-        <label class="col-md-4 control-label" for="email">Email</label>  
-        <div class="col-md-4">
+        <label class="col-md-4 control-label" for="email">Email</label>         
           <input type="text" [(ngModel)]="userModel.email" #email="ngModel" 
           [ngClass]="{'is-invalid':userForm.submitted && email.invalid}" 
             name="email"  placeholder="Email" class="form-control input-md" required email/>
             <div *ngIf ="userForm.submitted && email.invalid"  class="invalid-feedback">          
                 <div *ngIf ="email.errors.required">please enter your email</div>
                 <div *ngIf="email.errors.email">please enter valid email</div>
-            </div>
-        </div>
+            </div>        
       </div>
 
       <div class="form-group">
-          <label class="col-md-4 control-label" for="password">Password</label>
-          <div class="col-md-4">
+          <label class="col-md-4 control-label" for="password">Password</label>        
             <input type="password" [(ngModel)]="userModel.password" #password="ngModel"
             [ngClass]="{'is-invalid':userForm.submitted && password.invalid}" 
             name="password"  placeholder="password" class="form-control input-md" required minlength="6"/>
             <div *ngIf ="userForm.submitted && password.invalid"  class="invalid-feedback">          
                 <div *ngIf ="password.errors.required">please enter your password</div>
                 <div *ngIf="password.errors.minlength">please enter at least 6 character</div>
-            </div>
-          </div>
+            </div>          
         </div>      
      
       <div class="form-group">
-        <label class="col-md-4 control-label" for="address">Address</label>  
-        <div class="col-md-4">
+        <label class="col-md-4 control-label" for="address">Address</label>         
           <input type="text" [(ngModel)]="userModel.address" #address="ngModel"
           [ngClass]="{'is-invalid':userForm.submitted && address.invalid}"
           name="address"  placeholder="address" class="form-control input-md"required/>
           <div class="invalid-feedback">          
               <div>please enter your address </div>
-          </div>
-        </div>
+          </div>        
       </div> 
       
       <div class="form-group">
-        <label class="col-md-4 control-label" for="phone">Contact</label>  
-        <div class="col-md-4">
+        <label class="col-md-4 control-label" for="phone">Contact</label>        
           <input type="text" [(ngModel)]="userModel.phone" #phone="ngModel"
           [ngClass]="{'is-invalid':userForm.submitted && phone.invalid}"
           name="phone"  placeholder="contact" class="form-control input-md" required/>
           <div class="invalid-feedback">          
               <div>please enter your mobile number </div>
-          </div>
-        </div>
+          </div>        
       </div>
       <!-- radio button-->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="gender">Gender</label>
-        <div class="col-md-4">
-          <label class="radio-inline">
+        <label class="col-md-4 control-label" for="gender">Gender</label> 
+        <div class="col-md-4">       
+          <label class="radio-inline">             
             <input type="radio" value="M" name="gender" [(ngModel)]="userModel.gender" checked="checked">
             Male
           </label>
@@ -103,20 +89,12 @@
           <label class="radio-inline">
             <input type="radio" value ="F" name="gender" [(ngModel)]="userModel.gender">
             Female
-          </label>  
+          </label>   
           </div>
-        </div>
-      
-      
-      <!-- <div class="form-group">
-        <label class="col-md-4 control-label" for="gender">Gender:</label>  
-        <div class="col-md-4">
-          <input id="Gender" [(ngModel)]="userModel.gender" 
-          name="gender" type="text" placeholder="Gender" class="form-control input-md">
-        </div>
-      </div> -->
+        </div>     
+     
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label class="col-md-4 control-label" for="role">Role:</label>  
         <div class="col-md-4">
           <input id="Role" [(ngModel)]="userModel.role" #role="ngModel"
@@ -126,22 +104,21 @@
             <div>what is your role? </div>
         </div>     
         </div>
-      </div>  
+      </div>   -->
       <!-- role-->   
-      <!-- <div class ="form-group">  
-      <label class="col-md-4 control-label" for="role">Role</label>
-      <div class="col-md-4">
+       <div class ="form-group">  
+      <label class="col-md-4 control-label" for="role">Role</label>     
            <select class="form-control" id="role" [(ngModel)]="userModel.role">
-                <option value="admin">admin</option>
-                <option value="user">user</option>
-           </select>
-     </div>
-     </div> -->
+                <option value="1">admin</option>
+                <option value="2">user</option>
+           </select>     
+     </div> 
+
      <div class="form-group">
       <label class="col-md-4 control-label" for="Save"></label>
       <div class="col-md-8">
         <button id="Save" name="Save" type="ngSubmit" class="btn btn-success">Save</button>
-        <button id="Cancel" name="Cancel" class="btn btn-danger">Cancel</button>
+        <button id="Cancel" name="Cancel" class="btn btn-danger actionBtn" [routerLink]="['/dashboard']">Cancel</button>
       </div>
     </div>
     </fieldset>

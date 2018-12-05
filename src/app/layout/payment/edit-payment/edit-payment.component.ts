@@ -19,7 +19,8 @@ export class EditPaymentComponent implements OnInit {
           this.paymentService.getPaymentById(params.id).subscribe(
             data => {
               console.log(data)
-              this.paymentModel = JSON.parse(JSON.parse(JSON.stringify(data))._body);          
+              this.paymentModel = JSON.parse(JSON.parse(JSON.stringify(data))._body);    
+              console.log(this.paymentModel)      
             }
           );
         }
@@ -27,6 +28,7 @@ export class EditPaymentComponent implements OnInit {
     }
 
   ngOnInit() {
+    
   }
 
   editPayment() {

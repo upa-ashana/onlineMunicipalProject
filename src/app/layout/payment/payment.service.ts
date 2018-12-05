@@ -19,9 +19,10 @@ export class PaymentService {
   }
 
   updatePayment(paymentModel){
+    console.log(paymentModel)
     let paymentUpdateUrl = APIConstants.PROPERTY_TAX_PAYMENT_URL+"/update";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
-      return this.http.post(paymentUpdateUrl, paymentModel, {headers: getHeaders});
+      return this.http.put(paymentUpdateUrl, paymentModel, {headers: getHeaders});
   }
 
   getAllPayment(){

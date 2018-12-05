@@ -17,7 +17,8 @@ export class HouseService {
   }
 
   updateHouse(houseModel){
-    let houseUpdateUrl = APIConstants.HOUSE_INFO+"/save";
+    console.log(houseModel)
+    let houseUpdateUrl = APIConstants.HOUSE_INFO+"/update";
     let getHeaders = new Headers({'authorization':'Bearer '+this.token,'content-type':'application/json'});
       return this.http.put(houseUpdateUrl, houseModel, {headers: getHeaders});
   }

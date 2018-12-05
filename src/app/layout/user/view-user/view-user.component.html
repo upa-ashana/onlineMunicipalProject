@@ -16,18 +16,43 @@
       [headerHeight]="50"
       [footerHeight]="50"
       [rowHeight]="'auto'"
-      >
-      <ngx-datatable-column name="userId"></ngx-datatable-column>
-      <ngx-datatable-column name="First Name"></ngx-datatable-column>
-      <ngx-datatable-column name="Last Name"></ngx-datatable-column>
-      <ngx-datatable-column name="UserName"></ngx-datatable-column>
-      <ngx-datatable-column name="Password"></ngx-datatable-column>
-      <ngx-datatable-column name="Email"></ngx-datatable-column>     
-      <ngx-datatable-column name="Address"></ngx-datatable-column>
-      <ngx-datatable-column name="User Phone"></ngx-datatable-column>
-      <ngx-datatable-column name="Gender"></ngx-datatable-column>
-      <ngx-datatable-column name="Role"></ngx-datatable-column>   
-           
+       >
+       <table class="table table-striped" >
+           <thead>
+      <tr> 
+          <th>    
+               <ngx-datatable-column name="userId"></ngx-datatable-column>
+          </th>
+          <th>
+               <ngx-datatable-column name="First Name"></ngx-datatable-column>
+          </th>  
+          <th>
+               <ngx-datatable-column name="Last Name"></ngx-datatable-column>
+          </th>
+          <th>
+               <ngx-datatable-column name="UserName"></ngx-datatable-column>
+          </th>
+          <th>
+               <ngx-datatable-column name="Password"></ngx-datatable-column>
+          </th>
+          <th>
+               <ngx-datatable-column name="Email"></ngx-datatable-column>  
+          </th>  
+          <th> 
+                <ngx-datatable-column name="Address"></ngx-datatable-column>
+          </th>
+          <th>
+             <ngx-datatable-column name="User Phone"></ngx-datatable-column>
+         </th>
+         <th>
+            <ngx-datatable-column name="Gender"></ngx-datatable-column>
+          </th>
+         <th>
+             <ngx-datatable-column name="Role"></ngx-datatable-column>   
+         </th>
+</tr>
+    </thead>
+       </table>    
   
       <ngx-datatable-column name="Action" prop="userId" [sortable]="false">
           <ng-template let-rowIndex="rowIndex" let-id="userId" let-value="value" ngx-datatable-cell-template>

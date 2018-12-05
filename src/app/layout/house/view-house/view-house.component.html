@@ -23,8 +23,7 @@
     <ngx-datatable-column name="streetName"></ngx-datatable-column>
     <ngx-datatable-column name="houseArea"></ngx-datatable-column>
     <ngx-datatable-column name="housePrice"></ngx-datatable-column>     
-    <ngx-datatable-column name="totalHouseValue"></ngx-datatable-column>     
-
+    <ngx-datatable-column name="totalHouseValue"></ngx-datatable-column> 
 
     <ngx-datatable-column name="Action" prop="houseInfoId" [sortable]="false" >
         <ng-template let-rowIndex="rowIndex" let-id="houseInfoId" let-value="value" ngx-datatable-cell-template>
@@ -34,6 +33,7 @@
             <button class="btn btn-sm btn-danger actionBtn" (click)="deleteHouse(value)">
                 <i class="fa fa-trash"></i> Delete
             </button>
+            
         </ng-template> 
     </ngx-datatable-column> 
     
